@@ -1,0 +1,21 @@
+{
+  "name": "Bangladesh Ramadan Digital Calendar",
+  "short_name": "Ramadan BD",
+  "description": "Sehri, Iftar and Prayer times for Bangladesh districts.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#004d40",
+  "theme_color": "#004d40",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

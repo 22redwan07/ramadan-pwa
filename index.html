@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh Ramadan Digital Calendar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#004d40">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
+</head>
+<body class="theme-light">
+    <div class="app-container">
+        <header>
+            <div class="header-top">
+                <h1>Ramadan 2026</h1>
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+            </div>
+            <div class="district-selector">
+                <select id="district-select">
+                    <!-- Districts will be populated by JS -->
+                </select>
+                <button id="geo-btn" title="Use My Location">📍</button>
+            </div>
+        </header>
+
+        <main>
+            <section id="countdown-section" class="card">
+                <h2 id="countdown-label">Iftar Countdown</h2>
+                <div id="timer" class="timer-display">00:00:00</div>
+                <p id="next-event-time"></p>
+            </section>
+
+            <section id="prayer-times" class="card">
+                <h2>Today's Timings</h2>
+                <div class="times-grid">
+                    <div class="time-item" id="time-fajr"><span>Fajr</span> <span class="val">--:--</span></div>
+                    <div class="time-item" id="time-dhuhr"><span>Dhuhr</span> <span class="val">--:--</span></div>
+                    <div class="time-item" id="time-asr"><span>Asr</span> <span class="val">--:--</span></div>
+                    <div class="time-item" id="time-maghrib"><span>Maghrib (Iftar)</span> <span class="val">--:--</span></div>
+                    <div class="time-item" id="time-isha"><span>Isha</span> <span class="val">--:--</span></div>
+                    <div class="time-item highlight" id="time-sehri"><span>Sehri End</span> <span class="val">--:--</span></div>
+                    <div class="time-item highlight" id="time-iftar"><span>Iftar</span> <span class="val">--:--</span></div>
+                </div>
+            </section>
+
+            <section id="dua-section" class="card">
+                <div class="dua-tabs">
+                    <button class="tab-btn active" data-tab="sehri">Sehri Niyyah</button>
+                    <button class="tab-btn" data-tab="iftar">Iftar Dua</button>
+                </div>
+                <div class="dua-content" id="dua-display">
+                    <!-- Dua content will be populated by JS -->
+                </div>
+            </section>
+
+            <section id="calendar-section" class="card">
+                <h2>Ramadan Calendar</h2>
+                <div class="table-responsive">
+                    <table id="ramadan-table">
+                        <thead>
+                            <tr>
+                                <th>Ramadan</th>
+                                <th>Date</th>
+                                <th>Sehri</th>
+                                <th>Iftar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Calendar rows will be populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="share-btns">
+                <button id="share-wa">WhatsApp</button>
+                <button id="copy-link">Copy Link</button>
+            </div>
+            <p>© 2026 Bangladesh Ramadan PWA</p>
+        </footer>
+    </div>
+
+    <div id="install-prompt" class="install-banner hidden">
+        <p>Install this app for offline use!</p>
+        <button id="install-btn">Install</button>
+        <button id="close-install">✕</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
